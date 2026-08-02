@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ray Peratta — AI Automation Engineer</title>
+<meta name="description" content="Portafolio de Ray Peratta: AI Automation Engineer & Data Analyst. Sistemas inteligentes con LLMs, agentes de IA y automatización de flujos de trabajo.">
+<meta property="og:title" content="Ray Peratta — AI Automation Engineer">
+<meta property="og:description" content="Sistemas inteligentes con LLMs, agentes de IA y automatización.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0f;
+  --bg-2: #111118;
+  --surface: #16161f;
+  --border: #26262f;
+  --text: #e8e8ee;
+  --text-dim: #9a9aa8;
+  --accent: #7c6cf8;
+  --accent-2: #4dd0c4;
+  --gradient: linear-gradient(135deg, #7c6cf8 0%, #4dd0c4 100%);
+  --radius: 14px;
+  --max: 1080px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: rgba(124,108,248,.35); }
+
+/* ---------- Nav ---------- */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  backdrop-filter: blur(14px);
+  background: rgba(10,10,15,.72);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: var(--max); margin: 0 auto; padding: 14px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo {
+  font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 17px;
+  color: var(--text); text-decoration: none;
+}
+.logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  color: var(--text-dim); text-decoration: none; font-size: 14px; font-weight: 500;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--text); }
+.lang-toggle {
+  background: var(--surface); border: 1px solid var(--border); color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500;
+  padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all .2s;
+}
+.lang-toggle:hover { color: var(--text); border-color: var(--accent); }
+.burger { display: none; background: none; border: none; color: var(--text); font-size: 22px; cursor: pointer; }
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  padding: 120px 24px 60px;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 20%, rgba(124,108,248,.14), transparent),
+    radial-gradient(ellipse 50% 40% at 80% 70%, rgba(77,208,196,.09), transparent);
+  pointer-events: none;
+}
+.hero-inner { max-width: var(--max); margin: 0 auto; width: 100%; position: relative; }
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent-2);
+  border: 1px solid rgba(77,208,196,.3); border-radius: 999px;
+  padding: 6px 16px; margin-bottom: 28px;
+  animation: fadeUp .6s ease both;
+}
+.hero-tag .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); animation: pulse 2s infinite; }
+h1 {
+  font-size: clamp(38px, 7vw, 68px); font-weight: 800; line-height: 1.08;
+  letter-spacing: -0.03em; margin-bottom: 22px;
+  animation: fadeUp .6s .1s ease both;
+}
+h1 .grad {
+  background: var(--gradient);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero-sub {
+  font-size: clamp(16px, 2.2vw, 20px); color: var(--text-dim);
+  max-width: 640px; margin-bottom: 40px;
+  animation: fadeUp .6s .2s ease both;
+}
+.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp .6s .3s ease both; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 12px; font-weight: 600; font-size: 15px;
+  text-decoration: none; transition: all .25s; border: 1px solid transparent;
+}
+.btn-primary { background: var(--gradient); color: #fff; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(124,108,248,.35); }
+.btn-ghost { border-color: var(--border); color: var(--text); background: var(--surface); }
+.btn-ghost:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+/* ---------- Sections ---------- */
+section { padding: 96px 24px; }
+.wrap { max-width: var(--max); margin: 0 auto; }
+.section-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent);
+  text-transform: uppercase; letter-spacing: .15em; margin-bottom: 12px;
+}
+h2 { font-size: clamp(28px, 4.5vw, 40px); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
+.section-desc { color: var(--text-dim); max-width: 620px; margin-bottom: 48px; }
+
+/* ---------- About ---------- */
+.about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: start; }
+.about-text p { color: var(--text-dim); margin-bottom: 18px; font-size: 16.5px; }
+.about-text strong { color: var(--text); }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.stat {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 24px;
+}
+.stat .num {
+  font-size: 34px; font-weight: 800; letter-spacing: -0.02em;
+  background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.stat .lbl { font-size: 13px; color: var(--text-dim); margin-top: 4px; }
+
+/* ---------- Projects ---------- */
+.projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 30px; transition: all .3s; position: relative; overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--gradient); opacity: 0; transition: opacity .3s;
+}
+.card:hover { transform: translateY(-5px); border-color: rgba(124,108,248,.4); box-shadow: 0 18px 44px rgba(0,0,0,.4); }
+.card:hover::before { opacity: 1; }
+.card-icon {
+  width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  font-size: 22px; background: rgba(124,108,248,.12); margin-bottom: 20px;
+}
+.preview {
+  height: 150px; border-radius: 10px; overflow: hidden;
+  background: #0d0d14; border: 1px solid var(--border); margin-bottom: 20px;
+  transition: border-color .3s;
+}
+.card:hover .preview { border-color: rgba(124,108,248,.45); }
+.preview svg { display: block; width: 100%; height: 100%; }
+.card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.01em; }
+.card p { color: var(--text-dim); font-size: 15px; margin-bottom: 20px; flex: 1; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--text-dim);
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px;
+}
+.card-status {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: var(--accent-2); margin-top: 18px;
+}
+.card-link {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+  font-size: 13.5px; font-weight: 600; color: var(--accent); text-decoration: none;
+  transition: color .2s;
+}
+.card-link:hover { color: var(--accent-2); }
+.preview img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+
+/* ---------- Skills ---------- */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.skill-group { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; }
+.skill-group h4 {
+  font-size: 14px; font-weight: 600; color: var(--accent-2);
+  font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: .1em;
+  margin-bottom: 16px;
+}
+.skill-group ul { list-style: none; }
+.skill-group li { color: var(--text-dim); font-size: 14.5px; padding: 5px 0; display: flex; align-items: center; gap: 10px; }
+.skill-group li::before { content: '▸'; color: var(--accent); font-size: 12px; }
+
+/* ---------- Experience ---------- */
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--border); }
+.tl-item { position: relative; padding-bottom: 44px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before {
+  content: ''; position: absolute; left: -32px; top: 8px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--bg); border: 3px solid var(--accent);
+}
+.tl-date { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent-2); margin-bottom: 6px; }
+.tl-item h3 { font-size: 19px; font-weight: 700; }
+.tl-org { color: var(--text-dim); font-size: 14.5px; margin-bottom: 10px; }
+.tl-item ul { list-style: none; margin-top: 8px; }
+.tl-item li { color: var(--text-dim); font-size: 14.5px; padding: 3px 0 3px 20px; position: relative; }
+.tl-item li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
+
+/* ---------- Contact ---------- */
+.contact-box {
+  background: linear-gradient(160deg, var(--surface) 0%, var(--bg-2) 100%);
+  border: 1px solid var(--border); border-radius: 20px;
+  padding: 64px 40px; text-align: center;
+}
+.contact-box p { color: var(--text-dim); max-width: 520px; margin: 0 auto 36px; }
+.contact-links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--border); padding: 32px 24px;
+  text-align: center; color: var(--text-dim); font-size: 13.5px;
+}
+footer .mono { font-family: 'JetBrains Mono', monospace; }
+
+/* ---------- Animations ---------- */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .about-grid, .projects, .skills-grid { grid-template-columns: 1fr; }
+  .nav-links {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; background: var(--bg-2); border-bottom: 1px solid var(--border);
+    padding: 20px 24px; gap: 18px;
+  }
+  .nav-links.open { display: flex; }
+  .burger { display: block; }
+  section { padding: 72px 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#top">ray<span>.dev</span></a>
+    <div style="display:flex;gap:14px;align-items:center">
+      <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">EN</button>
+      <button class="burger" id="burger" aria-label="Menú">☰</button>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" data-i18n="nav.about">Sobre mí</a>
+      <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+      <a href="#skills" data-i18n="nav.skills">Stack</a>
+      <a href="#experience" data-i18n="nav.experience">Experiencia</a>
+      <a href="#contact" data-i18n="nav.contact">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-tag"><span class="dot"></span><span data-i18n="hero.tag">Disponible para nuevas oportunidades</span></div>
+    <h1><span data-i18n="hero.title1">Construyo sistemas inteligentes con</span> <span class="grad" data-i18n="hero.title2">IA y automatización</span></h1>
+    <p class="hero-sub" data-i18n="hero.sub">AI Automation Engineer & Data Analyst en Lisboa. Diseño agentes de IA, pipelines RAG y flujos de trabajo automatizados que resuelven problemas reales de negocio.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary" data-i18n="hero.cta1">Ver proyectos →</a>
+      <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">Contactar</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap reveal">
+    <div class="section-label" data-i18n="about.label">Sobre mí</div>
+    <h2 data-i18n="about.title">De datos a sistemas autónomos</h2>
+    <div class="about-grid" style="margin-top:32px">
+      <div class="about-text">
+        <p data-i18n="about.p1">Soy <strong>Ray Peratta</strong>, ingeniero especializado en sistemas impulsados por <strong>Large Language Models</strong>, agentes de IA y automatización de flujos de trabajo. Desarrollo soluciones de extremo a extremo: asistentes de IA, sistemas RAG, workflows multi-agente e integraciones de APIs.</p>
+        <p data-i18n="about.p2">Mi base es el <strong>análisis de datos</strong> — más de 2 años en consultora y operaciones multinacionales (Accenture, Conectys) creando dashboards, automatizando reporting y encontrando insights en KPIs operativos. Esa experiencia me dio una obsesión: <strong>eliminar el trabajo manual repetitivo</strong>.</p>
+        <p data-i18n="about.p3">Hoy aplico IA generativa para construir sistemas escalables, confiables y listos para producción. Si un proceso se repite, probablemente puedo automatizarlo.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="num">2+</div><div class="lbl" data-i18n="stat.1">Años en análisis de datos</div></div>
+        <div class="stat"><div class="num">10+</div><div class="lbl" data-i18n="stat.2">Automatizaciones en producción</div></div>
+        <div class="stat"><div class="num">3</div><div class="lbl" data-i18n="stat.3">Idiomas (ES · EN · PT)</div></div>
+        <div class="stat"><div class="num">24/7</div><div class="lbl" data-i18n="stat.4">Agente IA en producción</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" style="background:var(--bg-2)">
+  <div class="wrap reveal">
+    <div class="section-label" data-i18n="projects.label">Proyectos</div>
+    <h2 data-i18n="projects.title">Lo que he construido</h2>
+    <p class="section-desc" data-i18n="projects.desc">Proyectos reales, en producción o camino a ella. Cada uno nace de un problema personal que ninguna herramienta existente resolvía bien.</p>
+    <div class="projects">
+
+      <div class="card">
+        <div class="preview" aria-hidden="true">
+          <svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice">
+            <rect width="300" height="150" fill="#0d0d14"/>
+            <rect width="300" height="24" fill="#16161f"/>
+            <circle cx="16" cy="12" r="4" fill="#ff5f57"/><circle cx="32" cy="12" r="4" fill="#febc2e"/><circle cx="48" cy="12" r="4" fill="#28c840"/>
+            <text x="14" y="47" font-family="JetBrains Mono, monospace" font-size="11" fill="#4dd0c4">$ openclaw status</text>
+            <text x="14" y="66" font-family="JetBrains Mono, monospace" font-size="11" fill="#9a9aa8">✓ gateway · telegram · memory ok</text>
+            <text x="14" y="85" font-family="JetBrains Mono, monospace" font-size="11" fill="#9a9aa8">✓ 10 skills · cron activo</text>
+            <text x="14" y="106" font-family="JetBrains Mono, monospace" font-size="11" fill="#e8e8ee">$ heartbeat → SnackTrack: Fase 0</text>
+            <text x="14" y="128" font-family="JetBrains Mono, monospace" font-size="12" fill="#7c6cf8">▊</text>
+          </svg>
+        </div>
+        <h3 data-i18n="p1.title">Asistente Personal con IA (OpenClaw)</h3>
+        <p data-i18n="p1.desc">Agente de IA autoalojado integrado con Telegram, Obsidian y APIs externas. Gestiona memoria persistente, ejecuta tareas programadas (cron/heartbeats), automatiza flujos diarios y actúa como segunda memoria operativa.</p>
+        <div class="tags"><span class="tag">LLMs</span><span class="tag">Agentes</span><span class="tag">APIs REST</span><span class="tag">systemd</span><span class="tag">Linux</span></div>
+        <div class="card-status" data-i18n="p1.status">● En producción — uso diario</div>
+        <a class="card-link" href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener" data-i18n="link.base">Proyecto base ↗</a>
+      </div>
+
+      <div class="card">
+        <div class="preview">
+          <img src="assets/dashboard.png" alt="Dashboard Financiero — captura real de la app" loading="lazy">
+        </div>
+        <h3 data-i18n="p2.title">Hub de Automatización Financiera</h3>
+        <p data-i18n="p2.desc">App full-stack para tracking de gastos, ingresos, holdings cripto y pools de liquidez. Registro de movimientos vía Telegram (shorthand → API), precios en tiempo real desde Binance/Bybit, gráficos de PnL y distribución por categoría.</p>
+        <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Prisma</span><span class="tag">SQLite</span><span class="tag">Recharts</span></div>
+        <div class="card-status" data-i18n="p2.status">● En producción — self-hosted, uso diario</div>
+      </div>
+
+      <div class="card">
+        <div class="preview" aria-hidden="true">
+          <svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice">
+            <rect width="300" height="150" fill="#0d0d14"/>
+            <rect x="104" y="6" width="92" height="170" rx="14" fill="#16161f" stroke="#33333f" stroke-width="1.5"/>
+            <rect x="136" y="14" width="28" height="5" rx="2.5" fill="#33333f"/>
+            <text x="150" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="700" fill="#e8e8ee">SnackTrack</text>
+            <rect x="114" y="52" width="72" height="16" rx="5" fill="#0d0d14"/>
+            <rect x="120" y="57" width="34" height="6" rx="3" fill="#4dd0c4" opacity=".8"/>
+            <rect x="114" y="74" width="72" height="16" rx="5" fill="#0d0d14"/>
+            <rect x="120" y="79" width="44" height="6" rx="3" fill="#7c6cf8" opacity=".8"/>
+            <rect x="114" y="96" width="72" height="16" rx="5" fill="#0d0d14"/>
+            <rect x="120" y="101" width="26" height="6" rx="3" fill="#4dd0c4" opacity=".6"/>
+            <circle cx="150" cy="132" r="10" fill="#7c6cf8"/>
+            <text x="150" y="136.5" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#fff">+</text>
+          </svg>
+        </div>
+        <h3>SnackTrack</h3>
+        <p data-i18n="p3.desc">App Android nativa de nutrición con backend serverless. Escaneo y registro de alimentos, seguimiento de hábitos y sync en la nube. En camino a Google Play con beta cerrada de 12+ testers.</p>
+        <div class="tags"><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">Room</span><span class="tag">Hilt</span><span class="tag">Cloudflare Workers + D1</span></div>
+        <div class="card-status" data-i18n="p3.status">◐ En desarrollo — lanzamiento sep 2026</div>
+        <a class="card-link" href="https://github.com/gozuray/SnackTrack" target="_blank" rel="noopener" data-i18n="link.code">Código en GitHub ↗</a>
+      </div>
+
+      <div class="card">
+        <div class="preview" aria-hidden="true">
+          <svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice">
+            <rect width="300" height="150" fill="#0d0d14"/>
+            <rect x="16" y="55" width="76" height="40" rx="8" fill="#16161f" stroke="#7c6cf8" stroke-width="1.5"/>
+            <text x="54" y="79" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#e8e8ee">SQL / ETL</text>
+            <rect x="112" y="55" width="76" height="40" rx="8" fill="#16161f" stroke="#4dd0c4" stroke-width="1.5"/>
+            <text x="150" y="79" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#e8e8ee">n8n flow</text>
+            <rect x="208" y="55" width="76" height="40" rx="8" fill="#16161f" stroke="#7c6cf8" stroke-width="1.5"/>
+            <text x="246" y="79" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#e8e8ee">Power BI</text>
+            <line x1="92" y1="75" x2="108" y2="75" stroke="#4dd0c4" stroke-width="2"/>
+            <path d="M106 71 l6 4 -6 4" fill="none" stroke="#4dd0c4" stroke-width="2"/>
+            <line x1="188" y1="75" x2="204" y2="75" stroke="#4dd0c4" stroke-width="2"/>
+            <path d="M202 71 l6 4 -6 4" fill="none" stroke="#4dd0c4" stroke-width="2"/>
+            <text x="54" y="122" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#9a9aa8">extract</text>
+            <text x="150" y="122" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#9a9aa8">transform</text>
+            <text x="246" y="122" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#9a9aa8">visualize</text>
+            <text x="20" y="28" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#9a9aa8">PIPELINE AUTOMATIZADO</text>
+          </svg>
+        </div>
+        <h3 data-i18n="p4.title">Automatizaciones de Reporting</h3>
+        <p data-i18n="p4.desc">Pipelines de datos y reporting automatizado para operaciones multinacionales: dashboards de KPIs en Power BI, ETL con Python/SQL y flujos con n8n/Make que eliminaron horas de trabajo manual semanal.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">n8n</span><span class="tag">Make</span></div>
+        <div class="card-status" data-i18n="p4.status">● En producción — entorno empresarial</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap reveal">
+    <div class="section-label" data-i18n="skills.label">Stack</div>
+    <h2 data-i18n="skills.title">Tecnologías</h2>
+    <div class="skills-grid" style="margin-top:40px">
+      <div class="skill-group">
+        <h4 data-i18n="sk.1">IA Generativa & Agentes</h4>
+        <ul><li>OpenAI · Anthropic · Gemini</li><li>LangChain · LangGraph · LlamaIndex</li><li>MCP (Model Context Protocol)</li><li>RAG · Prompt Engineering</li><li>Hugging Face · Ollama</li></ul>
+      </div>
+      <div class="skill-group">
+        <h4 data-i18n="sk.2">Desarrollo</h4>
+        <ul><li>Python · TypeScript · SQL</li><li>Next.js · FastAPI</li><li>Kotlin · Jetpack Compose</li><li>Docker · Kubernetes</li><li>Git · Linux</li></ul>
+      </div>
+      <div class="skill-group">
+        <h4 data-i18n="sk.3">Datos & Automatización</h4>
+        <ul><li>PostgreSQL · MongoDB · Redis</li><li>Qdrant · Pinecone</li><li>n8n · Make · Power Automate</li><li>Power BI · Tableau · Looker Studio</li><li>Pandas · NumPy · ETL</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:var(--bg-2)">
+  <div class="wrap reveal">
+    <div class="section-label" data-i18n="exp.label">Experiencia</div>
+    <h2 data-i18n="exp.title">Trayectoria</h2>
+    <div class="timeline" style="margin-top:48px">
+      <div class="tl-item">
+        <div class="tl-date" data-i18n="e1.date">Oct 2025 — Actualidad</div>
+        <h3>Data Analyst</h3>
+        <div class="tl-org">Accenture · Lisboa, Portugal</div>
+        <ul>
+          <li data-i18n="e1.1">Análisis de datos operativos y reportes para toma de decisiones del cliente</li>
+          <li data-i18n="e1.2">Creación y mantenimiento de dashboards Power BI con KPIs clave</li>
+          <li data-i18n="e1.3">Automatización de procesos de reporting, reduciendo trabajo manual</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date" data-i18n="e2.date">Sep 2023 — May 2025</div>
+        <h3>Data Analyst</h3>
+        <div class="tl-org">Conectys · Lisboa, Portugal</div>
+        <ul>
+          <li data-i18n="e2.1">Análisis de KPIs operativos (calidad, volumen, SLAs) para cuentas de cliente</li>
+          <li data-i18n="e2.2">Reportes periódicos a management con insights y recomendaciones</li>
+          <li data-i18n="e2.3">Identificación de tendencias y cuellos de botella con propuestas de mejora</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date" data-i18n="e3.date">2016 — 2020</div>
+        <h3 data-i18n="e3.title">Ingeniería de Sistemas</h3>
+        <div class="tl-org">Universidad Privada del Norte · Lima, Perú</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap reveal">
+    <div class="contact-box">
+      <div class="section-label" data-i18n="contact.label">Contacto</div>
+      <h2 data-i18n="contact.title">¿Hablamos?</h2>
+      <p data-i18n="contact.desc">Abierto a roles de AI Automation Engineer, AI Engineer o LLM Engineer — y a proyectos freelance de automatización e IA aplicada.</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:ray.peratta.e@gmail.com">✉️ Email</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/ray-peratta" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/gozuray" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-ghost" href="https://t.me/princeperatta" target="_blank" rel="noopener">Telegram ↗</a>
+        <a class="btn btn-ghost" href="assets/CV-Ray-Peratta-ES.pdf" download>📄 CV (ES)</a>
+        <a class="btn btn-ghost" href="assets/CV-Ray-Peratta-EN.pdf" download>📄 CV (EN)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">© 2026 Ray Peratta</span> · Lisboa, Portugal · <span data-i18n="footer.made">Hecho a mano, sin frameworks de landing 🛠️</span>
+  </div>
+</footer>
+
+<script>
+// ---------- i18n ----------
+const i18n = {
+  es: {
+    'nav.about':'Sobre mí','nav.projects':'Proyectos','nav.skills':'Stack','nav.experience':'Experiencia','nav.contact':'Contacto',
+    'hero.tag':'Disponible para nuevas oportunidades',
+    'hero.title1':'Construyo sistemas inteligentes con','hero.title2':'IA y automatización',
+    'hero.sub':'AI Automation Engineer & Data Analyst en Lisboa. Diseño agentes de IA, pipelines RAG y flujos de trabajo automatizados que resuelven problemas reales de negocio.',
+    'hero.cta1':'Ver proyectos →','hero.cta2':'Contactar',
+    'about.label':'Sobre mí','about.title':'De datos a sistemas autónomos',
+    'about.p1':'Soy <strong>Ray Peratta</strong>, ingeniero especializado en sistemas impulsados por <strong>Large Language Models</strong>, agentes de IA y automatización de flujos de trabajo. Desarrollo soluciones de extremo a extremo: asistentes de IA, sistemas RAG, workflows multi-agente e integraciones de APIs.',
+    'about.p2':'Mi base es el <strong>análisis de datos</strong> — más de 2 años en consultora y operaciones multinacionales (Accenture, Conectys) creando dashboards, automatizando reporting y encontrando insights en KPIs operativos. Esa experiencia me dio una obsesión: <strong>eliminar el trabajo manual repetitivo</strong>.',
+    'about.p3':'Hoy aplico IA generativa para construir sistemas escalables, confiables y listos para producción. Si un proceso se repite, probablemente puedo automatizarlo.',
+    'stat.1':'Años en análisis de datos','stat.2':'Automatizaciones en producción','stat.3':'Idiomas (ES · EN · PT)','stat.4':'Agente IA en producción',
+    'projects.label':'Proyectos','projects.title':'Lo que he construido',
+    'projects.desc':'Proyectos reales, en producción o camino a ella. Cada uno nace de un problema personal que ninguna herramienta existente resolvía bien.',
+    'p1.title':'Asistente Personal con IA (OpenClaw)',
+    'p1.desc':'Agente de IA autoalojado que opera 24/7 en mi propio servidor (Linux + systemd). Integrado con Telegram, Obsidian y APIs externas: memoria persistente, tareas programadas (cron/heartbeats), 10 skills activos y automatización de flujos diarios.',
+    'p1.status':'● En producción — uso diario',
+    'p2.title':'Hub de Automatización Financiera',
+    'p2.desc':'Sistema full-stack que automatiza mis finanzas: un agente IA registra gastos e ingresos desde Telegram (lenguaje natural → API), cron actualiza el precio de SOL cada 5 min (288 updates/día) desde Binance/Bybit, con dashboard de PnL, holdings cripto y pools de liquidez.',
+    'p2.status':'● En producción — self-hosted, uso diario',
+    'p3.desc':'App Android nativa de nutrición con backend serverless. Escaneo y registro de alimentos, seguimiento de hábitos y sync en la nube. En camino a Google Play con beta cerrada de 12+ testers.',
+    'p3.status':'◐ En desarrollo — lanzamiento sep 2026',
+    'p4.title':'Automatizaciones de Reporting',
+    'p4.desc':'Pipelines de datos y reporting automatizado para operaciones multinacionales: dashboards de KPIs en Power BI, ETL con Python/SQL y flujos con n8n/Make que eliminaron horas de trabajo manual semanal.',
+    'p4.status':'● En producción — entorno empresarial',
+    'link.code':'Código en GitHub ↗','link.base':'Proyecto base ↗',
+    'skills.label':'Stack','skills.title':'Tecnologías',
+    'sk.1':'IA Generativa & Agentes','sk.2':'Desarrollo','sk.3':'Datos & Automatización',
+    'exp.label':'Experiencia','exp.title':'Trayectoria',
+    'e1.date':'Oct 2025 — Actualidad','e1.1':'Análisis de datos operativos y reportes para toma de decisiones del cliente','e1.2':'Creación y mantenimiento de dashboards Power BI con KPIs clave','e1.3':'Automatización de procesos de reporting, reduciendo trabajo manual',
+    'e2.date':'Sep 2023 — May 2025','e2.1':'Análisis de KPIs operativos (calidad, volumen, SLAs) para cuentas de cliente','e2.2':'Reportes periódicos a management con insights y recomendaciones','e2.3':'Identificación de tendencias y cuellos de botella con propuestas de mejora',
+    'e3.date':'2016 — 2020','e3.title':'Ingeniería de Sistemas',
+    'contact.label':'Contacto','contact.title':'¿Hablamos?',
+    'contact.desc':'Abierto a roles de AI Automation Engineer, AI Engineer o LLM Engineer — y a proyectos freelance de automatización e IA aplicada.',
+    'footer.made':'Hecho a mano, sin frameworks de landing 🛠️'
+  },
+  en: {
+    'nav.about':'About','nav.projects':'Projects','nav.skills':'Stack','nav.experience':'Experience','nav.contact':'Contact',
+    'hero.tag':'Open to new opportunities',
+    'hero.title1':'I build intelligent systems with','hero.title2':'AI & automation',
+    'hero.sub':'AI Automation Engineer & Data Analyst based in Lisbon. I design AI agents, RAG pipelines and automated workflows that solve real business problems.',
+    'hero.cta1':'View projects →','hero.cta2':'Get in touch',
+    'about.label':'About','about.title':'From data to autonomous systems',
+    'about.p1':"I'm <strong>Ray Peratta</strong>, an engineer specialised in systems powered by <strong>Large Language Models</strong>, AI agents and workflow automation. I build end-to-end solutions: AI assistants, RAG systems, multi-agent workflows and API integrations.",
+    'about.p2':'My foundation is <strong>data analytics</strong> — 2+ years in consulting and multinational operations (Accenture, Conectys) building dashboards, automating reporting and finding insights in operational KPIs. That experience gave me an obsession: <strong>eliminating repetitive manual work</strong>.',
+    'about.p3':'Today I apply generative AI to build scalable, reliable, production-ready systems. If a process repeats, I can probably automate it.',
+    'stat.1':'Years in data analytics','stat.2':'Automations in production','stat.3':'Languages (ES · EN · PT)','stat.4':'AI agent in production',
+    'projects.label':'Projects','projects.title':'What I have built',
+    'projects.desc':'Real projects, in production or on the way. Each one started as a personal problem no existing tool solved well.',
+    'p1.title':'Personal AI Assistant (OpenClaw)',
+    'p1.desc':'Self-hosted AI agent running 24/7 on my own server (Linux + systemd). Integrated with Telegram, Obsidian and external APIs: persistent memory, scheduled tasks (cron/heartbeats), 10 active skills and daily workflow automation.',
+    'p1.status':'● In production — daily use',
+    'p2.title':'Personal Finance Automation Hub',
+    'p2.desc':'Full-stack system that automates my finances: an AI agent logs expenses and income from Telegram (natural language → API), a cron job updates the SOL price every 5 min (288 updates/day) from Binance/Bybit, with a PnL dashboard, crypto holdings and liquidity pools.',
+    'p2.status':'● In production — self-hosted',
+    'p3.desc':'Native Android nutrition app with a serverless backend. Food scanning and logging, habit tracking and cloud sync. On its way to Google Play with a closed beta of 12+ testers.',
+    'p3.status':'◐ In development — launch Sep 2026',
+    'p4.title':'Reporting Automations',
+    'p4.desc':'Data pipelines and automated reporting for multinational operations: Power BI KPI dashboards, Python/SQL ETL and n8n/Make flows that removed hours of weekly manual work.',
+    'p4.status':'● In production — enterprise environment',
+    'link.code':'Code on GitHub ↗','link.base':'Base project ↗',
+    'skills.label':'Stack','skills.title':'Technologies',
+    'sk.1':'Generative AI & Agents','sk.2':'Development','sk.3':'Data & Automation',
+    'exp.label':'Experience','exp.title':'Career path',
+    'e1.date':'Oct 2025 — Present','e1.1':'Operational data analysis and reporting for client decision-making','e1.2':'Built and maintained Power BI dashboards with key KPIs','e1.3':'Automated reporting processes, reducing manual work',
+    'e2.date':'Sep 2023 — May 2025','e2.1':'Analysed operational KPIs (quality, volume, SLAs) for client accounts','e2.2':'Periodic reporting to management with insights and recommendations','e2.3':'Identified trends and bottlenecks with process improvement proposals',
+    'e3.date':'2016 — 2020','e3.title':'Systems Engineering (BSc)',
+    'contact.label':'Contact','contact.title':"Let's talk",
+    'contact.desc':'Open to AI Automation Engineer, AI Engineer or LLM Engineer roles — and freelance automation & applied AI projects.',
+    'footer.made':'Handmade, no landing-page frameworks 🛠️'
+  }
+};
+
+let lang = localStorage.getItem('lang') || 'es';
+const toggle = document.getElementById('langToggle');
+
+function applyLang(l) {
+  lang = l;
+  localStorage.setItem('lang', l);
+  document.documentElement.lang = l;
+  toggle.textContent = l === 'es' ? 'EN' : 'ES';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (i18n[l][key] !== undefined) el.innerHTML = i18n[l][key];
+  });
+  document.title = l === 'es'
+    ? 'Ray Peratta — AI Automation Engineer'
+    : 'Ray Peratta — AI Automation Engineer';
+}
+toggle.addEventListener('click', () => applyLang(lang === 'es' ? 'en' : 'es'));
+applyLang(lang);
+
+// ---------- Mobile menu ----------
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// ---------- Scroll reveal ----------
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
