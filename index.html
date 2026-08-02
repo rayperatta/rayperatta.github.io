@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ray Peratta — Data Analyst & AI Automation Engineer</title>
-<meta name="description" content="Portfolio of Ray Peratta: Data Analyst & AI Automation Engineer in Lisbon. Automating processes with Python, Power BI and AI systems.">
+<title>Ray Peratta — AI Automation Engineer</title>
+<meta name="description" content="Portfolio of Ray Peratta: AI Automation Engineer in Lisbon. LLM systems, AI agents, RAG and workflow automation.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,7 +144,7 @@ h1 .grad {
 }
 .hero-sub {
   font-size: clamp(17px, 2.2vw, 21px); color: var(--text-dim);
-  max-width: 620px; margin-bottom: 40px;
+  max-width: 640px; margin-bottom: 40px;
 }
 .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
 .btn {
@@ -303,16 +303,16 @@ footer { border-top: 1px solid var(--border); margin-top: 96px; background: var(
   <div class="orb orb-2"></div>
   <div class="hero-content">
     <span class="hero-tag hero-in" style="--d:.05s">Available for opportunities · Lisbon, PT</span>
-    <h1 class="hero-in" style="--d:.15s">Ray Peratta<br><span class="grad">Data Analyst &amp; AI Automation Engineer</span></h1>
-    <p class="hero-sub hero-in" style="--d:.3s">I turn manual workflows into automated systems — from Power BI reporting pipelines to production-grade AI agents and full-stack apps.</p>
+    <h1 class="hero-in" style="--d:.15s">Ray Peratta<br><span class="grad">AI Automation Engineer</span></h1>
+    <p class="hero-sub hero-in" style="--d:.3s">I build intelligent systems with LLMs, AI agents and workflow automation — multi-agent pipelines, RAG and production-grade integrations, grounded in 2+ years of data &amp; operations experience.</p>
     <div class="hero-ctas hero-in" style="--d:.45s">
       <a class="btn btn-primary" href="#projects">View projects ↓</a>
       <a class="btn btn-ghost" href="assets/CV-Ray-Peratta-EN.pdf" target="_blank">Download CV</a>
     </div>
     <div class="hero-stats hero-in" style="--d:.6s">
+      <div class="stat"><b>6</b><span>AI systems built &amp; shipped</span></div>
       <div class="stat"><b>2+</b><span>years in data &amp; operations</span></div>
-      <div class="stat"><b>5</b><span>production projects built</span></div>
-      <div class="stat"><b>3</b><span>languages · ES · EN · PT</span></div>
+      <div class="stat"><b>24/7</b><span>self-hosted AI agent running</span></div>
     </div>
   </div>
   <div class="scroll-hint">scroll ↓</div>
@@ -320,12 +320,12 @@ footer { border-top: 1px solid var(--border); margin-top: 96px; background: var(
 
 <section id="about">
   <div class="reveal"><div class="section-label">01 — About</div>
-  <h2 class="section-title">Data with an automation mindset</h2></div>
+  <h2 class="section-title">AI systems that survive production</h2></div>
   <div class="about-grid">
     <div class="about-text reveal" style="--d:.1s">
-      <p>I'm a Data Analyst with <b>2+ years across consulting and multinational operations</b> (Accenture, Conectys), focused on automating operational processes and reporting workflows with <b>Python, Power BI and Power Automate</b>.</p>
-      <p>Beyond my day job, I design and ship <b>production-grade systems</b>: an Android app with a cloud backend, a finance dashboard with exchange integrations, and a self-hosted AI agent infrastructure that runs 24/7 on my own server. I don't just use tools — I build them.</p>
-      <p>Legal work permit for Portugal/EU.</p>
+      <p>I'm an <b>AI Automation Engineer</b> specialised in building intelligent systems with <b>Large Language Models, AI agents and process automation</b> — backed by 2+ years as a Data Analyst in consulting and multinational operations (Accenture, Conectys).</p>
+      <p>I design and ship <b>production-grade AI systems</b>: multi-agent pipelines with LangGraph, RAG document intelligence, LLM-powered workflow automation with n8n, and a self-hosted AI agent that runs 24/7 on my own infrastructure.</p>
+      <p>My data background means I don't just prototype — I build systems that survive contact with real operations. Legal work permit for Portugal/EU.</p>
     </div>
     <div class="about-card reveal" style="--d:.2s">
       <dl>
@@ -368,37 +368,43 @@ footer { border-top: 1px solid var(--border); margin-top: 96px; background: var(
 
 <section id="projects">
   <div class="reveal"><div class="section-label">03 — Projects</div>
-  <h2 class="section-title">Things I've built</h2></div>
+  <h2 class="section-title">AI systems I've built</h2></div>
   <div class="projects-grid">
     <div class="project reveal" style="--d:.05s">
       <span class="project-num">01</span>
-      <h3>SnackTrack</h3>
-      <p>Android macro-nutrient calendar with real supermarket prices from Portugal (Continente, Auchan). Cloud backend with AI product matching and scheduled price-scraping jobs.</p>
-      <div class="tags"><span class="tag">Kotlin</span><span class="tag">Jetpack Compose</span><span class="tag">Room · Hilt</span><span class="tag">Cloudflare Workers + D1</span><span class="tag">TypeScript</span></div>
+      <h3>AI Job Hunter</h3>
+      <p>LangGraph-based multi-agent system that automates the job application process: scrapes postings, analyses role fit, tailors the CV and writes a personalized cover letter — powered by LLMs via OpenRouter.</p>
+      <div class="tags"><span class="tag">LangGraph</span><span class="tag">Multi-agent</span><span class="tag">LLMs</span><span class="tag">Python</span><span class="tag">OpenRouter</span></div>
     </div>
     <div class="project reveal" style="--d:.12s">
       <span class="project-num">02</span>
-      <h3>Finance Dashboard</h3>
-      <p>Full-stack personal finance dashboard with a token-authenticated REST API and Bybit exchange integration (HMAC-SHA256) tracking a SOL/USDT pool. A systemd timer refreshes prices every 5 minutes.</p>
-      <div class="tags"><span class="tag">TypeScript</span><span class="tag">Prisma + SQLite</span><span class="tag">REST API</span><span class="tag">Bybit API</span><span class="tag">systemd</span></div>
+      <h3>AI Document Intake Pipeline</h3>
+      <p>Simulated inbox (emails, PDFs, invoices, forms) → LLM-powered structured extraction → validation → Postgres persistence → automatic routing by type and urgency. The LLM is a component of the pipeline, not the product.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">LLM extraction</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">CI</span></div>
     </div>
     <div class="project reveal" style="--d:.19s">
       <span class="project-num">03</span>
-      <h3>Natively for Linux</h3>
-      <p>Built an AI meeting assistant from source for Linux, writing a custom Rust system-audio backend over PipeWire and fixing Wayland/Hyprland window behaviour.</p>
-      <div class="tags"><span class="tag">Rust</span><span class="tag">PipeWire</span><span class="tag">Electron</span><span class="tag">TypeScript</span><span class="tag">Wayland</span></div>
+      <h3>RAG Document Q&amp;A API</h3>
+      <p>Production-ready Retrieval-Augmented Generation system for querying PDF documents in natural language — chunked and embedded with local sentence-transformers, served via FastAPI.</p>
+      <div class="tags"><span class="tag">RAG</span><span class="tag">FastAPI</span><span class="tag">sentence-transformers</span><span class="tag">Embeddings</span><span class="tag">Docker</span></div>
     </div>
     <div class="project reveal" style="--d:.26s">
       <span class="project-num">04</span>
-      <h3>Personal AI Agent Infrastructure</h3>
-      <p>Self-hosted AI assistant running 24/7: Telegram bot, systemd services and timers, cron automations for price tracking and boot notifications, with persistent memory and messaging routing.</p>
-      <div class="tags"><span class="tag">Linux</span><span class="tag">Node.js</span><span class="tag">systemd</span><span class="tag">LLM APIs</span><span class="tag">Automation</span></div>
+      <h3>AI Lead Enrichment &amp; Routing</h3>
+      <p>Automated lead processing with n8n + LLMs: classifies incoming leads (industry, size, intent score), enriches them with personalized outreach suggestions and routes by priority — with Slack/Telegram notifications.</p>
+      <div class="tags"><span class="tag">n8n</span><span class="tag">LLM classification</span><span class="tag">Webhooks</span><span class="tag">Notion</span><span class="tag">Slack / Telegram</span></div>
     </div>
     <div class="project reveal" style="--d:.33s">
       <span class="project-num">05</span>
-      <h3>Pixel Agents</h3>
-      <p>Real-time visual dashboard monitoring local AI coding-agent sessions — polls the agent CLI every 3 seconds with zero token cost. Audited and adapted the codebase for personal use.</p>
-      <div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Node API</span><span class="tag">Real-time</span></div>
+      <h3>Personal AI Agent Infrastructure</h3>
+      <p>Self-hosted AI assistant running 24/7 on my own server: Telegram interface, persistent memory, scheduled automations via systemd/cron (price tracking, notifications) and multi-model routing.</p>
+      <div class="tags"><span class="tag">LLM APIs</span><span class="tag">Agents</span><span class="tag">Linux</span><span class="tag">systemd</span><span class="tag">Node.js</span></div>
+    </div>
+    <div class="project reveal" style="--d:.40s">
+      <span class="project-num">06</span>
+      <h3>Natively for Linux</h3>
+      <p>AI meeting assistant built from source for Linux: local Whisper speech-to-text, LLM answers via OpenRouter, and a custom Rust system-audio backend over PipeWire — plus Wayland/Hyprland UI fixes.</p>
+      <div class="tags"><span class="tag">Whisper STT</span><span class="tag">Rust</span><span class="tag">PipeWire</span><span class="tag">Electron</span><span class="tag">LLMs</span></div>
     </div>
   </div>
 </section>
@@ -408,20 +414,20 @@ footer { border-top: 1px solid var(--border); margin-top: 96px; background: var(
   <h2 class="section-title">Toolbox</h2></div>
   <div class="skills-grid">
     <div class="skill-group reveal" style="--d:.05s">
-      <h3><span class="dot"></span>Data</h3>
-      <div class="chips"><span class="chip">SQL</span><span class="chip">Python (Pandas, NumPy)</span><span class="chip">Advanced Excel</span><span class="chip">Google Sheets</span></div>
+      <h3><span class="dot"></span>AI &amp; LLMs</h3>
+      <div class="chips"><span class="chip">LLM integration (OpenAI, OpenRouter)</span><span class="chip">Multi-agent systems (LangGraph)</span><span class="chip">RAG</span><span class="chip">Prompt engineering</span><span class="chip">Vector DBs (Qdrant, Pinecone)</span></div>
     </div>
     <div class="skill-group reveal" style="--d:.12s">
-      <h3><span class="dot"></span>Visualisation</h3>
-      <div class="chips"><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Looker Studio</span></div>
+      <h3><span class="dot"></span>Automation</h3>
+      <div class="chips"><span class="chip">n8n / Make</span><span class="chip">Power Automate</span><span class="chip">REST APIs</span><span class="chip">Webhooks</span><span class="chip">Scripting</span></div>
     </div>
     <div class="skill-group reveal" style="--d:.19s">
-      <h3><span class="dot"></span>Automation &amp; AI</h3>
-      <div class="chips"><span class="chip">Power Automate</span><span class="chip">n8n / Make</span><span class="chip">REST APIs</span><span class="chip">LLM integration (OpenAI)</span><span class="chip">Prompt engineering</span><span class="chip">Scripting</span></div>
+      <h3><span class="dot"></span>Data</h3>
+      <div class="chips"><span class="chip">SQL</span><span class="chip">Python (Pandas, NumPy)</span><span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Advanced Excel</span></div>
     </div>
     <div class="skill-group reveal" style="--d:.26s">
       <h3><span class="dot"></span>Engineering</h3>
-      <div class="chips"><span class="chip">ETL / data cleaning</span><span class="chip">Git</span><span class="chip">KPI reporting</span><span class="chip">Process improvement</span></div>
+      <div class="chips"><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">Git</span><span class="chip">PostgreSQL</span><span class="chip">ETL / data cleaning</span></div>
     </div>
   </div>
 </section>
@@ -450,7 +456,7 @@ footer { border-top: 1px solid var(--border); margin-top: 96px; background: var(
     <div class="reveal">
       <div class="section-label">06 — Contact</div>
       <h2>Let's talk<span style="color:var(--accent)">.</span></h2>
-      <p>Open to Data Analyst, Automation and AI Engineering roles in Lisbon or remote.</p>
+      <p>Open to AI Engineer, AI Automation and LLM Engineering roles in Lisbon or remote.</p>
       <div class="contact-links">
         <a class="btn btn-primary" href="mailto:ray.peratta.e@gmail.com">ray.peratta.e@gmail.com</a>
         <a class="btn btn-ghost" href="tel:+351911917585">+351 911 917 585</a>
