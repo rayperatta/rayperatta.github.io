@@ -31,11 +31,12 @@ Legal work permit for Portugal/EU. Languages: Spanish (native), English (C1), Po
 
 ## Screenshots
 
-Cards 1–4 have real screenshots of their public GitHub repos (taken with headless Chromium, stored in `assets/screenshots/`, displayed at the top of each card, clickable → repo URL, plus a "View on GitHub ↗" link):
+Cards 1–4 and 7 have real screenshots of their public GitHub repos (taken with headless Chromium, stored in `assets/screenshots/`, displayed at the top of each card, clickable → repo URL, plus a "View on GitHub ↗" link):
 - ai-job-hunter → github.com/gozuray/ai-job-hunter
 - ai-document-intake → github.com/gozuray/ai-document-intake
 - rag-document-qa → github.com/gozuray/rag-document-qa
 - n8n-lead-enrichment → github.com/gozuray/n8n-lead-enrichment
+- excel-vba-automation → github.com/gozuray/excel-vba-automation
 
 ## Skills (grouped chips — AI first)
 
