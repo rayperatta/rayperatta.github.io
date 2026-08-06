@@ -9,7 +9,7 @@ Build a single-page professional portfolio website for a job interview for **AI 
 ## Person
 
 **Ray Peratta** — AI Automation Engineer
-📍 Lisbon, Portugal · ray.peratta.e@gmail.com · +351 911 917 585 · github.com/gozuray
+📍 Lisbon, Portugal · ray.peratta.e@gmail.com · +351 911 917 585 · github.com/rayperatta
 Legal work permit for Portugal/EU. Languages: Spanish (native), English (C1), Portuguese (B2).
 
 **Profile:** AI Automation Engineer specialised in building intelligent systems with Large Language Models (LLMs), AI agents and process automation — backed by 2+ years as a Data Analyst in consulting and multinational operations (Accenture, Conectys). Builds production-grade AI systems, not just prototypes.
@@ -32,11 +32,11 @@ Legal work permit for Portugal/EU. Languages: Spanish (native), English (C1), Po
 ## Screenshots
 
 Cards 1–4 and 7 have real screenshots of their public GitHub repos (taken with headless Chromium, stored in `assets/screenshots/`, displayed at the top of each card, clickable → repo URL, plus a "View on GitHub ↗" link):
-- ai-job-hunter → github.com/gozuray/ai-job-hunter
-- ai-document-intake → github.com/gozuray/ai-document-intake
-- rag-document-qa → github.com/gozuray/rag-document-qa
-- n8n-lead-enrichment → github.com/gozuray/n8n-lead-enrichment
-- excel-vba-automation → github.com/gozuray/excel-vba-automation
+- ai-job-hunter → github.com/rayperatta/ai-job-hunter
+- ai-document-intake → github.com/rayperatta/ai-document-intake
+- rag-document-qa → github.com/rayperatta/rag-document-qa
+- n8n-lead-enrichment → github.com/rayperatta/n8n-lead-enrichment
+- excel-vba-automation → github.com/rayperatta/excel-vba-automation
 
 ## Skills (grouped chips — AI first)
 
