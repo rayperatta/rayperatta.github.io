@@ -19,19 +19,18 @@ Legal work permit for Portugal/EU. Languages: Spanish (native), English (C1), Po
 1. **Data Analyst — Accenture** (Oct 2025 – Present, Lisbon): analyse operational data and produce reports supporting client decision-making; automate reporting with Python and Power Automate reducing manual work; build and maintain Power BI dashboards tracking key KPIs.
 2. **Data Analyst — Conectys** (Sep 2023 – May 2025, Lisbon): analysed operational KPIs (quality, volume, SLAs); identified trends/bottlenecks and implemented process improvements; delivered periodic reports to management and clients.
 
-## Featured projects (cards, 7 — AI/automation, verified real)
+## Featured projects (cards, 6 — AI/automation, verified real)
 
 1. **AI Job Hunter** — LangGraph-based multi-agent system that automates the job application process: scrapes job postings, analyses role fit, tailors the CV and writes a personalized cover letter, powered by LLMs via OpenRouter. Tags: LangGraph · Multi-agent · LLMs · Python · OpenRouter.
 2. **AI Document Intake Pipeline** — simulated inbox (emails, PDFs, invoices, forms) → LLM-powered structured extraction → validation → Postgres persistence → automatic routing by type/urgency → notification. The LLM is a component of the pipeline, not the product. CI with ruff + pytest. Tags: Python · LLM extraction · PostgreSQL · Docker · CI.
 3. **RAG Document Q&A API** — production-ready Retrieval-Augmented Generation system for querying PDF documents in natural language: documents chunked and embedded with sentence-transformers (local, free), served via FastAPI. Tags: RAG · FastAPI · sentence-transformers · Embeddings · Docker.
 4. **AI Lead Enrichment & Routing** — automated lead processing pipeline with n8n + LLMs: classifies leads (industry, company size, intent score), enriches them with personalized outreach suggestions, routes by score and logs to Notion/Sheets with Slack/Telegram notifications. Tags: n8n · LLM classification · Webhooks · Notion · Slack/Telegram.
 5. **Personal AI Agent Infrastructure** — self-hosted AI assistant running 24/7 on his own server: Telegram interface, persistent memory, scheduled automations (price tracking, boot notifications via systemd/cron) and multi-model routing. Tags: LLM APIs · Agents · Linux · systemd · Node.js.
-6. **Natively for Linux** — AI meeting assistant built from source for Linux: local Whisper speech-to-text, LLM answers via OpenRouter, and a custom Rust system-audio backend over PipeWire, plus Wayland/Hyprland UI fixes. Tags: Whisper STT · Rust · PipeWire · Electron · LLMs.
-7. **Excel VBA Report Automation** — production-grade Excel VBA toolkit that automates the full daily reporting cycle: consolidates multi-source CSV/Excel exports, cleans and deduplicates data, applies corporate formatting, exports a print-ready PDF and distributes it via Outlook — with centralized error handling, performance tuning and audit logging. Tags: VBA · Excel · Outlook · Reporting Automation · PDF Export.
+6. **Excel VBA Report Automation** — production-grade Excel VBA toolkit that automates the full daily reporting cycle: consolidates multi-source CSV/Excel exports, cleans and deduplicates data, applies corporate formatting, exports a print-ready PDF and distributes it via Outlook — with centralized error handling, performance tuning and audit logging. Tags: VBA · Excel · Outlook · Reporting Automation · PDF Export.
 
 ## Screenshots
 
-Cards 1–4 and 7 have real screenshots of their public GitHub repos (taken with headless Chromium, stored in `assets/screenshots/`, displayed at the top of each card, clickable → repo URL, plus a "View on GitHub ↗" link):
+Cards 1–4 and 6 have real screenshots of their public GitHub repos (taken with headless Chromium, stored in `assets/screenshots/`, displayed at the top of each card, clickable → repo URL, plus a "View on GitHub ↗" link):
 - ai-job-hunter → github.com/rayperatta/ai-job-hunter
 - ai-document-intake → github.com/rayperatta/ai-document-intake
 - rag-document-qa → github.com/rayperatta/rag-document-qa

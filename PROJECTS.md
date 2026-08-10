@@ -36,15 +36,7 @@ A self-hosted AI assistant running 24/7 on my own server. It talks to me through
 
 ---
 
-## 05: Natively for Linux
-
-An AI meeting assistant I built from source for Linux. It transcribes meetings locally with Whisper and answers questions in real time through OpenRouter. The hard part was system audio: I wrote a custom Rust backend to capture it over PipeWire. Also includes UI fixes for Wayland/Hyprland.
-
-**Stack:** Whisper STT, Rust, PipeWire, Electron, LLMs
-
----
-
-## 06: Excel VBA Report Automation
+## 05: Excel VBA Report Automation
 
 A VBA toolkit that handles the full daily reporting cycle in Excel. It pulls data from multiple CSV and Excel exports, cleans and deduplicates it, applies corporate formatting, then exports a print-ready PDF and sends it through Outlook. Error handling and audit logging are built in.
 
